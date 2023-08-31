@@ -1,0 +1,113 @@
+.cart{
+  padding-top: 30px;
+  &__nav{
+    width: 65%;
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-title{
+      color: #282828;
+      font-size: 22px;
+    }
+    &-text{
+      color: #282828;
+      font-size: 18px;
+    }
+  }
+  &__row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 44px 0 15px;
+  }
+  &__card{
+    width: calc(25% - 22.5px);
+    position: relative;
+    padding: 15px 0 55px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-btns{
+      margin-top: 15px;
+      display: flex;
+      column-gap: 40px;
+      align-items: center;
+    }
+    &-btn2{
+      font-size: 20px;
+      font-weight: 700;
+      padding: 3px 22px;
+    }
+    &-img{
+      margin-bottom: 5px;
+      width: 60%;
+    }
+    &-btn{
+      background: #282828;
+      color: white;
+      width: 100%;
+      padding: 15px 0;
+      position: absolute;
+      bottom: 0;
+    }
+    &-title{
+      margin-top: auto;
+      margin-bottom: 15px;
+      color: #282828;
+      font-weight: 700;
+      font-size: 22px;
+    }
+    &-line{
+      margin: 24px 0 8px;
+      width: 100%;
+      background: #9c9c9c;
+      height: 2px;
+    }
+    &-size{
+      margin-top: 12px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 300;
+      color: #282828;
+    }
+    &-price{
+      color: #282828;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    &-count{
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      color: #282828;
+      font-size: 20px;
+      span{
+        font-size: 17px;
+        color: #282828;
+        font-weight: 600;
+      }
+    }
+    &-line{
+      width: 165px;
+      height: 2px;
+      background: #282828;
+      margin-top: 3px;
+    }
+    &-btn{
+      padding: 10px 45px;
+      background: #282828;
+      color: #9c9c9c;
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+}

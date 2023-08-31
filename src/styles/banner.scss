@@ -1,0 +1,48 @@
+.banner{
+  padding: 44px 0 75px;
+  &__img{
+    border-radius: 2px;
+    width: 100%;
+    height: 100%;
+  }
+  &__mySwiper{
+    width: 50%;
+    height: 266px;
+  }
+  &__row{
+    display: flex;
+  }
+  &__info{
+    border-radius: 2px;
+    padding: 10px 65px;
+    width: 36%;
+    height: 266px;
+    margin-right: 70px;
+    background: #282828;
+    &-title{
+      font-weight: 600;
+      color: #9c9c9c;
+      font-size: 18px;
+      span{
+        font-size: 25px;
+        font-weight: 700;
+      }
+    }
+    &-text{
+      color: #9c9c9c;
+      margin: 15px 0 50px;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 140%;
+    }
+    &-link{
+      background: #9c9c9c;
+      color: #282828;
+      font-weight: 600;
+      padding: 8px 25px;
+      border-radius: 2px;
+    }
+  }
+}
+
+

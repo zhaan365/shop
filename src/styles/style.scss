@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  resize: none;
+  font-style: normal;
+  font-family: Space Grotesk, sans-serif;
+  font-weight: 400;
+  transition: .3s;
+}
+body{
+  background: #9c9c9c;
+}
+button{
+  cursor: pointer;
+  border: none;
+}
+.container{
+  height: 100%;
+  max-width: 1200px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+@import "header";
+@import "banner";
+@import "hitSale";
+@import "card";
+@import "form";
+@import "product";
+@import "catalog";
+@import "favorites";
+@import "cart";
+@import "checkout";
+@import "info";

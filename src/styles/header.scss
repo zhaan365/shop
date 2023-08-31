@@ -1,0 +1,118 @@
+.header{
+  &__top{
+    padding: 12px 0;
+    background: #282828;
+    &-menu{
+      display: flex;
+      column-gap: 26px;
+    }
+    &-link{
+      font-size: 18px;
+      font-weight: 600;
+      color: #7b7b7b;
+      &:hover{
+        color: white;
+      }
+    }
+    &-phone{
+      color: #7b7b7b;
+      font-size: 18px;
+    }
+    &-tel{
+      display: flex;
+      align-items: center;
+      column-gap: 15px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #7b7b7b;
+    }
+    &-nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__bottom{
+    background: #282828;
+    padding: 12px 0;
+    &-img{
+      color: black;
+    }
+    &-link{
+      background: #7b7b7b;
+      padding: 2px 5px;
+      border-radius: 5px;
+      width: 15%;
+      display: flex;
+      font-size: 32px;
+      color: black;
+      font-weight: 700;
+    }
+    &-field{
+      padding: 7px 12px;
+      width: 500px;
+      border: #7b7b7b solid 2px;
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+    }
+    &-search{
+      color: #7b7b7b;
+      font-size: 25px;
+    }
+    &-input{
+      padding-left: 5px;
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      color: #7b7b7b;
+      width: 100%;
+      height: 15px;
+      outline: none;
+      &::placeholder{
+        font-weight: 300;
+      }
+    }
+    &-icons{
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+    &-icon{
+      font-size: 22px;
+      color: #7b7b7b;
+      &:hover{
+        color: white;
+      }
+    }
+    &-icon2{
+      font-size: 25px;
+      color: #7b7b7b;
+      &:hover{
+        color: white;
+      }
+    }
+    &-icon3{
+      font-size: 29px;
+      color: #7b7b7b;
+      &:hover{
+        color: white;
+      }
+    }
+    &-nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-start{
+      display: flex;
+      align-items: center;
+      column-gap: 36px;
+    }
+    &-span{
+      cursor: pointer;
+      color: white;
+    }
+  }
+}

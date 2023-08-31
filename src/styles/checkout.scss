@@ -1,0 +1,162 @@
+.checkout{
+  padding: 50px 0;
+  &__title{
+    font-weight: 700;
+    font-size: 22px;
+  }
+  &__link{
+    margin: 15px 0 36px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    &-text2{
+      font-size: 15px;
+      color: black;
+    }
+    &-text{
+      font-size: 15px;
+      color: black;
+      font-weight: 700;
+    }
+    &-line{
+      width: 25px;
+      height: 1px;
+      background: black;
+    }
+  }
+  &__form{
+    &-title{
+      color: white;
+      margin-bottom: 42px;
+    }
+    &-top{
+      padding: 40px 75px;
+      display: flex;
+      column-gap: 120px;
+      background: #282828;
+    }
+    &-block{
+      width: 42%;
+    }
+    &-fields{
+      row-gap: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    &-fields2{
+      color: #9c9c9c;
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      border-bottom: #9c9c9c solid 1px;
+    }
+    &-field{
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #9c9c9c;
+      padding: 5px;
+      width: 100%;
+      &::placeholder{
+        color: #9c9c9c;
+      }
+    }
+    &-block2{
+      width: 35%;
+    }
+    &-list{
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+    &-item{
+      padding: 12px 12px;
+      display: flex;
+      background: #9c9c9c;
+      column-gap: 130px;
+      border-radius: 2px;
+    }
+    &-item2{
+      padding: 12px 12px;
+      display: flex;
+      column-gap: 35px;
+      border-radius: 2px;
+      background: #9c9c9c;
+    }
+    &-item3{
+      padding: 12px 12px;
+      display: flex;
+      column-gap: 134px;
+      border-radius: 2px;
+      background: #9c9c9c;
+    }
+    &-product{
+      color: #282828;
+    }
+    &-price{
+      color: #282828;
+    }
+    &-prices{
+      color: #282828;
+      font-weight: 700;
+    }
+    &-bottom{
+      margin-top: 10px;
+      padding: 40px 75px;
+      display: flex;
+      column-gap: 120px;
+      background: #282828;
+    }
+    &-count{
+      background: #F1EADC;
+    }
+    &-box{
+      color: #9c9c9c;
+      display: flex;
+      align-items: center;
+      column-gap: 25px;
+      margin-bottom: 32px;
+      input{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+    &-btn{
+      padding: 15px 46px;
+      font-size: 14px;
+      background: var(--cta, #6E9C9F);
+      color: black;
+      border-radius: 2px;
+    }
+    &-title4{
+      margin-bottom: 75px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
