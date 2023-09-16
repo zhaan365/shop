@@ -1,0 +1,76 @@
+.footer{
+  background: #282828;
+  padding: 22px 0 32px;
+  &__row{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card{
+    &-title{
+      text-align: center;
+      font-size: 19px;
+      color: #9c9c9c;
+    }
+    &-line{
+      width: 130px;
+      height: 2px;
+      background: #9c9c9c;
+      margin: 8px 0 20px;
+    }
+    &-row{
+      row-gap: 13px;
+      display: flex;
+      flex-direction: column;
+    }
+    &-text{
+      font-size: 15px;
+      color: #9c9c9c;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+  &__icons{
+    width: 250px;
+    &-icons{
+      margin: 15px 0 25px;
+      display: flex;
+      column-gap: 21px;
+    }
+    &-link{
+      width: 30px;
+      height: 30px;
+    }
+    &-icon{
+      width: 100%;
+    }
+    &-img{
+      color: cornflowerblue;
+    }
+    &-title{
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 40px;
+      span{
+        color: cornflowerblue;
+      }
+    }
+    &-email{
+      display: flex;
+      font-size: 18px;
+      color: #9c9c9c;
+      column-gap: 8px;
+      max-width: max-content;
+      padding: 4px 15px 3px;
+      border: #9c9c9c solid 2px;
+      border-radius: 5px;
+      span{
+        margin-top: 2px;
+      }
+    }
+  }
+  &__nav{
+    padding: 0 15px;
+  }
+}

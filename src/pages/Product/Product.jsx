@@ -1,31 +1,23 @@
-import React, {Fragment, useContext, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import ProductSlider from "../../components/ProductSlider/ProductSlider";
 import ProductInfo from "../../components/ProductInfo/ProductInfo";
 import {Link, useParams} from 'react-router-dom'
 import api from "../../config/api/api";
-import HitSale from "../../components/HitSale/HitSale";
-import Card from "../../components/Card/Card";
-import {CustomContext} from "../../config/context/context";
+import {HiOutlineArrowNarrowRight} from "react-icons/hi"
 
 
 const Product = () => {
 
-    const {hitSale, getHitSale} = useContext(CustomContext)
+    const params = useParams();
 
-    useEffect(() => {
-        getHitSale()
-    }, [])
-
-    const params = useParams()
-
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState({});
 
     useEffect(() => {
         api(`products/${params.id}`).json()
             .then((res) => setProduct(res))
     }, [])
 
-    console.log(product)
+    console.log(product);
 
     if ('id' in product){
         return (
@@ -38,27 +30,17 @@ const Product = () => {
                                 Главная
                             </Link>
 
-                            <div className="checkout__link-line"></div>
+                            <span><HiOutlineArrowNarrowRight/></span>
 
                             <p className="checkout__link-text2">
-                                Продукт
+                                {product.title}
                             </p>
                         </div>
-
                         <div className="product__row">
                             <ProductSlider product={product}/>
                             <ProductInfo product={product}/>
                         </div>
 
-                        <div className="hitSale__row">
-                            {
-                                hitSale.map((item) => (
-                                    <Fragment key={item.id}>
-                                        <Card item={item}/>
-                                    </Fragment>
-                                ))
-                            }
-                        </div>
                     </div>
                 </section>
             </>

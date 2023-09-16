@@ -15,6 +15,8 @@ const Context = (props) => {
 
     const [search, setSearch] = useState('')
 
+    const [isLoading, setIsLoading] = useState(true)
+
     const navigate = useNavigate()
 
     // start userContent
@@ -121,15 +123,89 @@ const Context = (props) => {
     }
 
 
+
+    const addOrder = (order, setPopup, redirect) => {
+        api.patch(`users/${user.id}`, {
+            headers: {
+                'content-type': 'application/json'
+            },
+            json: {
+                point: Math.floor(user.point + (order.totalPrice / 100 * 7)),
+                orders: [...user.orders, order],
+                carts: []
+            }
+        }).json().then((res) => {
+            setUser(res)
+            localStorage.setItem('user', JSON.stringify(res))
+            setPopup(true)
+            redirect()
+        })
+    }
+
     //end userContent
 
 
     //start hitSale
 
     const getHitSale = () => {
-        api('products?_sort=sale&_order=desc&_limit=12').json()
-            .then((res) => setHitSale(res))
+        api('products?_sort=sale&_order=desc&_limit=8').json()
+            .then((res) => {
+                setHitSale(res)
+                setIsLoading(false)
+            })
     }
+
+    const getHitSale2 = () => {
+        // Замените 'selectedCategories' на ваш массив выбранных категорий
+        const selectedCategories = ['Redmi'];
+
+        // Соберите строку с параметрами фильтрации для категорий
+        const categoryFilter = selectedCategories.map(category => `category=${category}`).join('&');
+
+        api(`products?_sort=sale&_order=desc&_limit=&${categoryFilter}`).json()
+            .then((res) => {
+                setHitSale(res);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                // Обработка ошибки
+                console.error(error);
+            });
+    };
+    const getHitSale3 = () => {
+        // Замените 'selectedCategories' на ваш массив выбранных категорий
+        const selectedCategories = ['Apple'];
+
+        // Соберите строку с параметрами фильтрации для категорий
+        const categoryFilter = selectedCategories.map(category => `category=${category}`).join('&');
+
+        api(`products?_sort=sale&_order=desc&_limit=&${categoryFilter}`).json()
+            .then((res) => {
+                setHitSale(res);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                // Обработка ошибки
+                console.error(error);
+            });
+    };
+    const getHitSale4 = () => {
+        // Замените 'selectedCategories' на ваш массив выбранных категорий
+        const selectedCategories = ['Samsung'];
+
+        // Соберите строку с параметрами фильтрации для категорий
+        const categoryFilter = selectedCategories.map(category => `category=${category}`).join('&');
+
+        api(`products?_sort=sale&_order=desc&_limit=&${categoryFilter}`).json()
+            .then((res) => {
+                setHitSale(res);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                // Обработка ошибки
+                console.error(error);
+            });
+    };
 
     //end hitSale
 
@@ -156,7 +232,8 @@ const Context = (props) => {
 
     let value = {
         user, setUser, registerUser, loginUser, logOutUser, hitSale, getHitSale, favoritesHandle, favorites,
-        search, setSearch, addCarts, addCartsCountPlus, addCartsCountMinus
+        search, setSearch, addCarts, addCartsCountPlus, addCartsCountMinus, addOrder, getHitSale2, getHitSale3,
+        isLoading, setIsLoading, getHitSale4
     }
 
 

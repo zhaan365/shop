@@ -24,6 +24,13 @@ button{
   padding: 0 50px;
   margin: 0 auto;
 }
+.nav{
+  display: flex;
+}
+.home{
+  background: #282828;
+  padding: 25px 0;
+}
 @import "header";
 @import "banner";
 @import "hitSale";
@@ -34,4 +41,9 @@ button{
 @import "favorites";
 @import "cart";
 @import "checkout";
-@import "info";
+@import "room";
+@import "swiper";
+@import "about";
+@import "tabs";
+@import "footer";
+@import "samsung";

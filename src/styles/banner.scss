@@ -13,15 +13,21 @@
     display: flex;
   }
   &__info{
-    border-radius: 2px;
-    padding: 10px 65px;
+    //border-radius: 2px;
+    background: url("../assets/oboy.jpeg") center/cover no-repeat;
+    padding: 18px 32px 0;
     width: 36%;
     height: 266px;
     margin-right: 70px;
-    background: #282828;
+    //background: #282828;
+    &-nav{
+      padding: 5px 32px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    }
     &-title{
       font-weight: 600;
-      color: #9c9c9c;
+      color: white;
       font-size: 18px;
       span{
         font-size: 25px;
@@ -29,20 +35,19 @@
       }
     }
     &-text{
-      color: #9c9c9c;
+      color: white;
       margin: 15px 0 50px;
       font-weight: 300;
       font-size: 15px;
       line-height: 140%;
     }
     &-link{
-      background: #9c9c9c;
-      color: #282828;
+      //background: #9c9c9c;
+      color: white;
       font-weight: 600;
-      padding: 8px 25px;
-      border-radius: 2px;
+      //padding: 8px 25px;
+      //border-radius: 2px;
     }
   }
 }
-
 

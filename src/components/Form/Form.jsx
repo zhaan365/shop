@@ -53,34 +53,19 @@ const Form = () => {
 
             <div className="form__left">
 
-                <p className="form__logo" ref={password}><RiLoginBoxLine/></p>
-
                 <form noValidate className="form__content" onSubmit={handleSubmit(submitForm)}>
-                    <div className="form__content-nav">
+                    <div className={location.pathname === '/login' ? "form__content-nav" : "form__content-nav2"}>
 
                         <h2 className="form__content-title">
                             {
-                                location.pathname === '/login' ? 'Sign in' : 'Sign up'
+                                location.pathname === '/login' ? 'Войти' : 'Зарегистрироваться'
                             }
                         </h2>
-                        <p className="form__content-text">
-                            {
-                                location.pathname === '/login' ? 'Если у вас нет учетной записи, зарегистрируйтесь' : 'Если у вас уже есть учетная запись зарегистрируйтесь'
-                            }
-                            <br/>
-                            Вы можете
-                            {
-                                location.pathname === '/login' ? <Link className="form__content-link" to={'/register'}> зарегистрироваться здесь !</Link> : <Link className="form__content-link" to={'/login'}> войти здесь !</Link>
-                            }
 
-                        </p>
 
                         <label className="form__label">
                             <span className="form__label-text">Email</span>
                             <div className="form__label-field">
-                            <span className="form__label-icon">
-                                <TfiEmail/>
-                            </span>
                                 <input {...register('email', {
                                     required: {
                                         message: 'Email обязательно к заполнению',
@@ -95,6 +80,9 @@ const Form = () => {
                                         value: /^[^ ]+@[^ ]+\.[a-z]{2,5}$/
                                     }
                                 })} placeholder="Введите ваш адрес электронной почты" className="form__label-input" type="email"/>
+                                <span className="form__label-icon">
+                                    <TfiEmail size={25}/>
+                                </span>
                             </div>
                             <p className="form__label-error">
                                 {errors.email && errors.email?.message}
@@ -102,11 +90,8 @@ const Form = () => {
                         </label>
                         {
                             location.pathname === '/register' && <label className="form__label">
-                                <span className="form__label-text">Name</span>
+                                <span className="form__label-text">Имя</span>
                                 <div className="form__label-field">
-                            <span className="form__label-icon">
-                                <FiUser/>
-                            </span>
                                     <input {...register('name', {
                                         required: {
                                             message: 'Имя обязательно к заполнению',
@@ -121,6 +106,9 @@ const Form = () => {
                                             value: /^[а-яА-ЯёЁa-zA-Z]+$/
                                         }
                                     })} placeholder="Введите ваше имя" className="form__label-input" type="text"/>
+                                    <span className="form__label-icon">
+                                        <FiUser size={25}/>
+                                    </span>
                                 </div>
                                 <p className="form__label-error">
                                     {errors.name && errors.name?.message}
@@ -129,11 +117,8 @@ const Form = () => {
                         }
                         {
                             location.pathname === '/register' && <label className="form__label">
-                                <span className="form__label-text">Surname</span>
+                                <span className="form__label-text">Фамилия</span>
                                 <div className="form__label-field">
-                            <span className="form__label-icon">
-                                <FiUsers/>
-                            </span>
                                     <input {...register('surname', {
                                         required: {
                                             message: 'Фамилия обязательно к заполнению',
@@ -148,6 +133,9 @@ const Form = () => {
                                             value: /^[а-яА-ЯёЁa-zA-Z]+$/
                                         }
                                     })} placeholder="Введите вашу фамилию" className="form__label-input" type="text"/>
+                                    <span className="form__label-icon">
+                                        <FiUsers size={25}/>
+                                    </span>
                                 </div>
                                 <p className="form__label-error">
                                     {errors.surname && errors.surname?.message}
@@ -156,11 +144,8 @@ const Form = () => {
                         }
                         {
                             location.pathname === '/register' && <label className="form__label">
-                                <span className="form__label-text">Phone</span>
+                                <span className="form__label-text">Телефон</span>
                                 <div className="form__label-field">
-                            <span className="form__label-icon">
-                                <BiPhone/>
-                            </span>
                                     <InputMask mask={`+\\9\\96(999)99-99-99`} {...register('phone', {
                                         required: {
                                             value: true,
@@ -171,6 +156,9 @@ const Form = () => {
                                             message: 'Напишите правильно свой номер телефона'
                                         }
                                     })} placeholder="Введите ваш номер телефона" className="form__label-input" type="tel"/>
+                                    <span className="form__label-icon">
+                                <BiPhone size={25}/>
+                            </span>
                                 </div>
                                 <p className="form__label-error">
                                     {errors.phone && errors.phone?.message}
@@ -178,13 +166,8 @@ const Form = () => {
                             </label>
                         }
                         <label className="form__label">
-                            <span className="form__label-text">Password</span>
+                            <span className="form__label-text">Пароль</span>
                             <div className="form__label-field">
-                            <span className="form__label-icon" onClick={() => setPasswordView(prev => !prev)}>
-                                {
-                                    passwordView ? <BsFillEyeSlashFill/> : <BsFillEyeFill/>
-                                }
-                            </span>
                                 <input {...register('password', {
                                     required: {
                                         message: 'Пароль обязательно к заполнению',
@@ -195,7 +178,11 @@ const Form = () => {
                                         message: 'Пароль должен содержать не менее 5 символов, заглавную букву, число!'
                                     }
                                 })} placeholder="Введите ваш пароль" className="form__label-input" type={passwordView ? 'text' : 'password'}/>
-
+                                <span className="form__label-icon" onClick={() => setPasswordView(prev => !prev)}>
+                                {
+                                    passwordView ? <BsFillEyeSlashFill size={25}/> : <BsFillEyeFill size={25}/>
+                                }
+                            </span>
                             </div>
                             <p className="form__label-error">
                                 {errors.password && errors.password?.message}
@@ -203,7 +190,7 @@ const Form = () => {
                         </label>
                         {
                             location.pathname === '/register' && <label className="form__label">
-                                <span className="form__label-text">Confirm password</span>
+                                <span className="form__label-text">Подтвердите пароль</span>
                                 <div className="form__label-field">
                                     {/*<span className="form__label-icon" onClick={() => setPasswordView(prev => !prev)}>*/}
                                     {/*    {*/}
@@ -221,7 +208,19 @@ const Form = () => {
                                 </p>
                             </label>
                         }
-                        <button className="form__btn" type="submit">Login</button>
+                        <button className="form__btn" type="submit">Войти</button>
+
+                        <p className="form__content-text">
+                            {/*{*/}
+                            {/*    location.pathname === '/login' ? 'Если у вас нет учетной записи, зарегистрируйтесь' : 'Если у вас уже есть учетная запись зарегистрируйтесь'*/}
+                            {/*}*/}
+                            {/*<br/>*/}
+                            {/*Вы можете*/}
+                            {
+                                location.pathname === '/login' ? <Link className="form__content-link" to={'/register'}> зарегистрироваться здесь !</Link> : <Link className="form__content-link" to={'/login'}> войти здесь !</Link>
+                            }
+
+                        </p>
 
                     </div>
                 </form>

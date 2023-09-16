@@ -1,57 +1,84 @@
 .catalog{
-  padding: 30px 0 80px;
-  &__row{
-    display: flex;
-    column-gap: 40px;
-  }
+  padding-bottom: 32px;
   &__aside{
-    max-height: 380px;
-    width: 25%;
-    padding: 20px;
-    background: #282828;
+    margin-bottom: 15px;
+    padding: 12px 24px;
     display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    position: sticky;
-    top: 30px;
-    &-content{
+    justify-content: space-between;
+    align-items: center;
+    &-content1{
+      margin-top: 7px;
       display: flex;
-      flex-direction: column;
-      row-gap: 10px;
+      column-gap: 8px;
     }
     &-title{
-      color: #7b7b7b;
+      color: #282828;
       font-size: 20px;
       font-weight: 500;
     }
+    &-block{
+      width: 300px;
+      margin-top: 7px;
+    }
     &-prices{
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: center;
+      column-gap: 30px;
     }
     &-price{
-      color: #7b7b7b;
+      color: #282828;
       font-size: 16px;
       font-weight: 300;
     }
     &-line{
-      width: 15%;
+      width: 22%;
       height: 1px;
-      background: #7b7b7b;
+      background: #282828;
     }
     &-select{
-      border: #7b7b7b solid 1px;
+      border: #282828 solid 1px;
+      height: 45px;
       color: white;
     }
+    &-selects{
+      width: 220px;
+      height: 49px;
+    }
     &-span{
-      color: #7b7b7b;
+      color: #282828;
     }
     &-del{
-      padding: 8px 0;
-      background: #7b7b7b;
-      color: black;
+      padding: 12px 56px;
+      background: #282828;
+      color: #9c9c9c;
       font-size: 15px;
       font-weight: 500;
+    }
+  }
+  &__search{
+    width: 60%;
+    background: #282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    &-glass{
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+      color: #9c9c9c;
+      background: #282828;
+    }
+    &-field{
+      border-radius: 3px;
+      padding: 5px 10px;
+      width: 95%;
+      color: #282828;
+      font-weight: 600;
+      outline: none;
+      border: #282828 solid 2px;
+      background: #9c9c9c;
     }
   }
   &__content{
@@ -59,5 +86,11 @@
     .card{
       width: calc(33.33333% - 20px);
     }
+  }
+  &__nav{
+    margin: 10px 0 36px;
+    display: flex;
+    align-items: center;
+    column-gap: 120px;
   }
 }

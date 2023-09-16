@@ -1,0 +1,32 @@
+.swiper65{
+  margin-bottom: 54px;
+  &__slide{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: white;
+    padding-top: 10px;
+    &-card{
+      height: 235px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-img{
+      width: 180px;
+      height: 190px;
+    }
+    &-title{
+      text-align: center;
+      padding-top: 7px;
+      width: 100%;
+      margin-top: auto;
+      height: 40px;
+      background: #282828;
+      color: #9c9c9c;
+      font-size: 18px;
+      font-weight: 700;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+  }
+}

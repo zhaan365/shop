@@ -2,6 +2,7 @@ import React, {Fragment, useContext, useEffect, useState} from 'react';
 import {CustomContext} from "../../config/context/context";
 import Card from "../../components/Card/Card";
 import {Link} from "react-router-dom";
+import {HiOutlineArrowNarrowRight} from "react-icons/hi"
 
 const Favorites = () => {
 
@@ -17,11 +18,10 @@ const Favorites = () => {
         }
     }, [favorites])
 
-    console.log(favoritesPages)
 
     if (favorites.length){
         return (
-            <section className="hitSale">
+            <section className="hitSale favorites__favorites2">
                 <div className="container">
 
                     <div className="checkout__link">
@@ -29,19 +29,17 @@ const Favorites = () => {
                             Главная
                         </Link>
 
-                        <div className="checkout__link-line"></div>
+                        <span><HiOutlineArrowNarrowRight/></span>
 
                         <p className="checkout__link-text2">
-                            Корзинка
+                            Избранные
                         </p>
                     </div>
-
                     <div className="favorites__btn">
                         <button className="hitSale__title favorites__title">
                             Избранные товары :
                         </button>
                     </div>
-
                     <div className="hitSale__row">
                         {
                             favorites.filter((item, idx) => idx >= page * 4 - 4 && idx < page * 4).map((item) => (

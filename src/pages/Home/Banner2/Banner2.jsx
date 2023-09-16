@@ -12,6 +12,7 @@ import {Link} from "react-router-dom";
 
 
 const Banner2 = () => {
+
     return (
         <section className="banner">
             <div className="container">
@@ -20,9 +21,9 @@ const Banner2 = () => {
 
                     <Swiper
                         autoplay={
-                            {delay: 2000}
+                            {delay: 1000}
                         }
-                        speed={1000}
+                        speed={1500}
                         effect={'flip'}
                         grabCursor={true}
                         modules={[EffectFlip, Autoplay]}
@@ -43,21 +44,23 @@ const Banner2 = () => {
                     </Swiper>
 
                     <div className="banner__info">
-                        <h2 className="banner__info-title">
-                            КРУТОЙ ИНТЕРНЕТ <br/>
-                            МАГАЗИН <span>"ElaRio"</span>
-                        </h2>
+                        <div className="banner__info-nav">
+                            <h2 className="banner__info-title">
+                                КРУТОЙ ИНТЕРНЕТ <br/>
+                                МАГАЗИН <span>"ElaRio"</span>
+                            </h2>
 
-                        <p className="banner__info-text">
-                            Мы работаем на мировом рынке, <br/>
-                            что даёт нашим покупателям <br/>
-                            доступ к продукции разных <br/>
-                            стран и регионов.
-                        </p>
+                            <p className="banner__info-text">
+                                Мы работаем на мировом рынке, <br/>
+                                что даёт нашим покупателям <br/>
+                                доступ к продукции разных <br/>
+                                стран и регионов.
+                            </p>
 
-                        <Link className="banner__info-link" to={'/catalog'}>
-                            СМОТРЕТЬ КАТАЛОГ
-                        </Link>
+                            <Link className="banner__info-link" to={'/catalog'}>
+                                СМОТРЕТЬ КАТАЛОГ
+                            </Link>
+                        </div>
                     </div>
 
 

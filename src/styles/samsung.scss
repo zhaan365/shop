@@ -1,0 +1,135 @@
+.samsung{
+  padding: 25px 0;
+  &__row2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__row{
+    display: flex;
+
+    justify-content: space-between;
+    margin-bottom: 15px;
+    &-title{
+      cursor: pointer;
+      padding: 5px 90px;
+      border-radius: 5px;
+      color: #9c9c9c;
+      border: #9c9c9c solid 2px;
+      font-weight: 600;
+    }
+  }
+  &__tabs{
+    &-tab{
+      display: none;
+    }
+    &-block{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 44px;
+    }
+    &-imgs{
+      //height: 250px;
+      width: 40%;
+    }
+    &-img{
+      border-radius: 5px;
+      width: 100%;
+    }
+    &-info{
+      //height: 250px;
+      width: 50%;
+    }
+    &-title{
+      font-size: 20px;
+      color: #9c9c9c;
+      font-weight: 600;
+    }
+    &-text{
+      font-size: 16px;
+      line-height: 135%;
+      color: #9c9c9c;
+    }
+    &-text1{
+      font-size: 16px;
+      line-height: 120%;
+      margin-top: 15px;
+      color: #9c9c9c;
+    }
+    &-text2{
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 135%;
+      color: #9c9c9c;
+      span{
+        font-weight: 700;
+      }
+    }
+  }
+  &__active{
+    color: #282828;
+    background: #9c9c9c;
+  }
+  &__active2{
+    padding-top: 20px;
+    display: block;
+  }
+  &__top{
+    margin-top: 15px;
+    &-title{
+      font-size: 25px;
+      background: #282828;
+      text-align: center;
+      padding: 5px 0;
+      color: orange;
+      font-weight: 500;
+      border-radius: 5px;
+      margin-bottom: 25px;
+    }
+    &-row{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 25px;
+    }
+    &-img{
+      border-radius: 5px;
+      width: 33%;
+    }
+    &-text{
+      span{
+        font-size: 18px;
+        font-weight: 700;
+      }
+      width: 55%;
+      line-height: 150%;
+      font-size: 16px;
+    }
+    &-col{
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+    }
+  }
+  &__nav{
+    height: 390px;
+    margin: 18px 0;
+    padding: 20px 0;
+    background: #282828;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

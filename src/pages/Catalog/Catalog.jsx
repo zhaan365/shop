@@ -4,6 +4,8 @@ import Card from "../../components/Card/Card";
 import api from "../../config/api/api";
 import {CustomContext} from "../../config/context/context";
 import {Link, useLocation} from 'react-router-dom'
+import {LuSearch} from "react-icons/lu"
+import {HiOutlineArrowNarrowRight} from "react-icons/hi"
 
 const Catalog = () => {
 
@@ -34,20 +36,39 @@ const Catalog = () => {
             <section className="catalog">
                 <div className="container">
 
-                    <div className="checkout__link">
-                        <Link to={'/'} className="checkout__link-text">
-                            Главная
-                        </Link>
+                    <div className="catalog__nav">
+                        <div className="checkout__link">
+                            <Link to={'/'} className="checkout__link-text">
+                                Главная
+                            </Link>
 
-                        <div className="checkout__link-line"></div>
+                            <span><HiOutlineArrowNarrowRight/></span>
 
-                        <p className="checkout__link-text2">
-                            Каталог
-                        </p>
+                            <p className="checkout__link-text2">
+                                Каталог
+                            </p>
+                        </div>
+                        <div className="catalog__search">
+                        <span className="catalog__search-glass">
+                            <LuSearch size={25}/>
+                        </span>
+                            <input
+                                value={search}
+                                type="search"
+                                className="catalog__search-field"
+                                placeholder="Поиск"
+                                onChange={(e) => {
+                                    if (location.pathname !== '/catalog'){
+                                        navigate('/catalog')
+                                    }
+                                    setSearch(e.target.value)
+                                }}
+                            />
+                        </div>
                     </div>
-
+                    <AsideFilter slider={slider} setSlider={setSlider} category={category} setCategory={setCategory} sort={sort} setSort={setSort}/>
                     <div className="catalog__row">
-                        <div className="hitSale__row catalog__content">
+                        <div className="hitSale__row">
                             {
                                 products.map((item) => (
                                     <Fragment key={item.id}>
@@ -56,7 +77,6 @@ const Catalog = () => {
                                 ))
                             }
                         </div>
-                        <AsideFilter slider={slider} setSlider={setSlider} category={category} setCategory={setCategory} sort={sort} setSort={setSort}/>
                     </div>
                 </div>
             </section>

@@ -1,24 +1,30 @@
 
-import React, {useContext} from 'react';
-import {Link} from 'react-router-dom'
+import React, {useContext, useState} from 'react';
 import {AiOutlineHeart, AiFillHeart} from 'react-icons/ai'
 import {CustomContext} from "../../config/context/context";
+import {Link} from "react-router-dom"
 
 
 const ProductInfo = ({product}) => {
 
-    const {favorites, favoritesHandle} = useContext(CustomContext)
+    const {favorites, favoritesHandle, addCarts} = useContext(CustomContext)
 
     return (
         <div className="product__info">
 
-            <h2 className="product__info-title">
-                {product.title}
-            </h2>
-            <h3 className="product__info-subtitle">
-                {product.subtitle}
-            </h3>
-
+            <div className="product__info-nav">
+                <div className="product__info-nav1">
+                    <h2 className="product__info-title">
+                        {product.title}
+                    </h2>
+                    <h3 className="product__info-subtitle">
+                        {product.subtitle}
+                    </h3>
+                </div>
+                <p className="product__info-text">
+                    {product.price} с.
+                </p>
+            </div>
             <div className="product__info-block">
                 <h4 className="product__info-subtitle2">
                     {product.category}
@@ -44,11 +50,8 @@ const ProductInfo = ({product}) => {
             </div>
 
             <div className="product__info-box">
-                <p className="product__info-text">
-                    {product.price} с.
-                </p>
-                <Link to={'/checkout'} className="product__info-btn">
-                    купить
+                <Link to={'/cart'} onClick={() => addCarts(product)} className="product__info-btn">
+                    Добавить в корзину
                 </Link>
                 <p className="product__info-link" onClick={() => favoritesHandle(product)}>
                     {

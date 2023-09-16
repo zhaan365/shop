@@ -6,12 +6,16 @@ import Home from "./pages/Home/Home";
 import Catalog from "./pages/Catalog/Catalog";
 import Product from "./pages/Product/Product";
 import Cart from "./pages/Cart/Cart";
-import Room from "./pages/Room/Room";
 import NotFound from "./pages/NotFound/NotFound";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Favorites from "./pages/Favorites/Favorites";
 import Checkout from "./pages/Checkout/Checkout";
+import About from "./pages/About/About";
+import Room from "./pages/Room/Room";
+import Apple from "./pages/Apple/Apple";
+import Redmi from "./pages/Redmi/Redmi";
+import Samsung from "./pages/Samsung/Samsung";
 
 function App() {
 
@@ -22,6 +26,10 @@ function App() {
         <Route path='/' element={<Layout/>}>
           <Route path='' element={<Home/>}/>
           <Route path='/catalog' element={<Catalog/>}/>
+          <Route path='/redmi' element={<Redmi/>}/>
+          <Route path='/apple' element={<Apple/>}/>
+          <Route path='/samsung' element={<Samsung/>}/>
+          <Route path='/about' element={<About/>}/>
           <Route path='/product/:id' element={<Product/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/room' element={<Room/>}/>

@@ -1,55 +1,57 @@
 .form{
-  padding: 30px 50px;
-  height: 100vh;
+  padding: 36px 0 25px;
   &__content{
     display: flex;
     flex-direction: column;
     align-items: center;
     &-title{
-      color: #282828;
+      text-align: center;
+      color: cornflowerblue;
       font-size: 25px;
       font-weight: 700;
+      margin-bottom: 25px;
     }
     &-text{
-      color: #282828;
+      color: #9c9c9c;
       font-size: 16px;
-      margin: 20px 0;
-      line-height: 120%;
+      margin-top: 45px;
     }
     &-link{
-      color: black;
+      color: #9c9c9c;
       font-size: 16px;
-      font-weight: 500;
-      position: relative;
-      &::after{
-        content: '';
-        position: absolute;
-        width: 95%;
-        height: 2px;
-        background: black;
-        top: 22px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+      font-weight: 700;
     }
     &-nav{
-      width: 40%;
+      border-radius: 15px;
+      margin-top: 65px;
+      background: #282828;
+      padding: 32px 44px 15px;
+      width: 50%;
+    }
+    &-nav2{
+      border-radius: 15px;
+      background: #282828;
+      padding: 15px 44px;
+      width: 50%;
     }
   }
   &__label{
     &-text{
-      color: #282828;
+      color: white;
       font-size: 17px;
       font-weight: 500;
     }
     &-field{
+      span{
+        color: #9c9c9c;
+      }
       margin-bottom: 15px;
       margin-top: 12px;
       display: flex;
-      column-gap: 10px;
+      justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #282828;
-      width: 90%;
+      border-bottom: 1px solid #9c9c9c;
+      width: 100%;
       padding-bottom: 3px;
     }
     &-input{
@@ -58,16 +60,19 @@
       outline: none;
       background: transparent;
       font-size: 18px;
-      color: #282828;
+      color: #9c9c9c;
+    }
+    &-icon{
+      cursor: pointer;
     }
   }
   &__btn{
-    width: 90%;
-    padding: 15px 0;
-    border-radius: 32px;
-    background: #282828;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    background: cornflowerblue;
     box-shadow: 0 4px 26px 0 rgba(0, 0, 0, 0.25);
-    color: white;
+    color: #282828;
     font-size: 22px;
     font-weight: 600;
     margin-top: 32px;
